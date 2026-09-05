@@ -128,13 +128,13 @@ def emit_recurring(summary, byday, start_date, end_date, hh, mm, dur_min, remind
         vevent_utc(summary, s, e, rrule, reminder_minutes, desc, uid_tag="NZDT")
 
 
-def emit_once(summary, d, hh, mm, dur_min, reminder_minutes=10, desc=""):
+def emit_once(summary, d, hh, mm, dur_min, reminder_minutes=10, desc="", uid_tag=""):
     """Emit a one-off VEVENT at Auckland wall-clock hh:mm on date d."""
     off = NZDT if d >= DST_NZDT_START else NZST
     s = akl_utc(d, hh, mm, off)
     e = s + datetime.timedelta(minutes=dur_min)
     ld = lambda dt_: dt_.strftime("%Y-%m-%d")
-    uid = str(uuid.uuid5(uuid.NAMESPACE_URL, "sb://once:" + summary + ld(d) + str(hh) + str(mm)))
+    uid = str(uuid.uuid5(uuid.NAMESPACE_URL, "sb://once:" + summary + ld(d) + str(hh) + str(mm) + uid_tag))
     lines.append("BEGIN:VEVENT")
     lines.append("UID:%s" % uid)
     lines.append("DTSTAMP:" + stamp())
@@ -268,6 +268,48 @@ for w in [21, 22, 23, 24]:
 # ---------------------------------------------------------------------------
 emit_once("Curious Citizen (public law)", datetime.date(2026, 9, 30), 20, 30, 60, 30,
           "Week 23 public-law task (flagged for the calendar system).")
+
+# ---------------------------------------------------------------------------
+# 8. Nuku announcement events — read from 'Announcement Events.json' (maintained
+#    by .nuku-sync/nuku_to_calendar.py, which pulls Nuku/Canvas emails).
+#    Times stored as Auckland wall clock; generate once at a time known to be
+#    in the future — skip past dates so phantom historical events never land.
+# ---------------------------------------------------------------------------
+import os as _os
+import json as _json
+_ann_path = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)),
+                          "Announcement Events.json")
+if _os.path.exists(_ann_path):
+    try:
+        with open(_ann_path, encoding="utf-8") as _f:
+            _ann_events = _json.load(_f)
+    except Exception:
+        _ann_events = []
+else:
+    _ann_events = []
+
+_today = datetime.date.today()
+for _e in _ann_events:
+    try:
+        _ed = datetime.date.fromisoformat(_e["date"])
+    except Exception:
+        continue
+    if _ed < _today:
+        continue
+    _ehh, _emm = 17, 0
+    if _e.get("time"):
+        try:
+            _ehh, _emm = [int(x) for x in _e["time"].split(":")][:2]
+        except Exception:
+            pass
+    _dur = 60
+    _rem = 15
+    if _e.get("type") in ("test", "assignment"):
+        _rem = 1440  # one-day reminder for deadlines
+    _desc = "From Nuku announcement" + (": " + _e["location"] if _e.get("location") else "")
+    _summary = _e.get("summary") or "Nuku announcement"
+    emit_once(_summary, _ed, _ehh, _emm, _dur, _rem, _desc,
+              uid_tag="nuku:" + _e["id"])
 
 lines.append("END:VCALENDAR")
 
