@@ -9,5 +9,49 @@
   "location": "GBLT 1\r\n⏰ 5:00pm doors open; Common Room to follow; Room to follow",
   "source": "New events including IPLS x VUWLSS Patron's lecture: Navigating the Law School",
   "msg_id": "1a064533b27cfd97"
+ },
+ {
+  "id": "e7daaacd-68eb-5096-8b8a-89247e13ac7a",
+  "summary": "Assignment due (Crim): LAWS 214 Tutorial Assignment – Now Available",
+  "type": "assignment",
+  "course": "LAWS214",
+  "date": "2026-09-11",
+  "time": "16:00",
+  "location": null,
+  "source": "LAWS 214 Tutorial Assignment – Now Available: 26.F.LAWS214: Criminal Law",
+  "msg_id": "1a0596aa654e33e9"
+ },
+ {
+  "id": "ae103a20-22c9-5997-9407-4c21d96926fd",
+  "summary": "Assignment due (Torts): Tri 2 writing assignment now due on 24 Sept",
+  "type": "assignment",
+  "course": "LAWS212",
+  "date": "2026-09-24",
+  "time": null,
+  "location": null,
+  "source": "Tri 2 writing assignment now due on 24 Sept : 26.F.LAWS212: The Law of Torts",
+  "msg_id": "1a01d5d638205aff"
+ },
+ {
+  "id": "38fa49bc-af22-565a-9e04-0ce9fd9569f0",
+  "summary": "Workshop (Torts): Workshops - Important Please Read",
+  "type": "workshop",
+  "course": "LAWS212",
+  "date": "2026-09-14",
+  "time": "15:00",
+  "location": null,
+  "source": "Workshops - Important Please Read: 26.F.LAWS212: The Law of Torts",
+  "msg_id": "19c8cf993336df7f"
+ },
+ {
+  "id": "5784ca93-48bb-54b9-8f54-5fdb6852760d",
+  "summary": "Workshop (Torts): Workshops - Important Please Read",
+  "type": "workshop",
+  "course": "LAWS212",
+  "date": "2026-09-28",
+  "time": "15:00",
+  "location": null,
+  "source": "Workshops - Important Please Read: 26.F.LAWS212: The Law of Torts",
+  "msg_id": "19c8cf993336df7f"
  }
 ]
