@@ -241,10 +241,10 @@ emit_recurring("Muay Thai training", "WE", wl1, mt_end, 18, 30, 60, 30, "Welling
 emit_recurring("Abs (~30 min)",      "WE", wl1, mt_end, 19, 30, 30, 5,  "Post-training abs")
 
 # ---------------------------------------------------------------------------
-# 5. Groceries — Sunday 08:00-09:30 (runs through the schedule), DST split.
+# 5. Groceries — Saturday 08:00-09:30 (runs through the schedule), DST split.
 # ---------------------------------------------------------------------------
 gro_end = datetime.date(2026, 11, 15)
-emit_recurring("Groceries", "SU", wl1, gro_end, 8, 0, 90, 30, "Sunday groceries")
+emit_recurring("Groceries", "SA", wl1, gro_end, 8, 0, 90, 30, "Saturday groceries")
 
 # ---------------------------------------------------------------------------
 # 6. Tutorials — discrete occurrences on their specific weeks.
