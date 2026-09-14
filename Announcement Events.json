@@ -33,29 +33,7 @@
   "msg_id": "1a01d5d638205aff"
  },
  {
-  "id": "38fa49bc-af22-565a-9e04-0ce9fd9569f0",
-  "summary": "Workshop (Torts): Workshops - Important Please Read",
-  "type": "workshop",
-  "course": "LAWS212",
-  "date": "2026-09-14",
-  "time": "15:00",
-  "location": null,
-  "source": "Workshops - Important Please Read: 26.F.LAWS212: The Law of Torts",
-  "msg_id": "19c8cf993336df7f"
- },
-{
-   "id": "5784ca93-48bb-54b9-8f54-5fdb6852760d",
-   "summary": "Workshop (Torts): Workshops - Important Please Read",
-   "type": "workshop",
-   "course": "LAWS212",
-   "date": "2026-09-28",
-   "time": "15:00",
-   "location": null,
-   "source": "Workshops - Important Please Read: 26.F.LAWS212: The Law of Torts",
-   "msg_id": "19c8cf993336df7f"
-  },
-  {
-   "id": "9cedf244-202f-5361-92ec-fa6e89a60cd0",
+  "id": "9cedf244-202f-5361-92ec-fa6e89a60cd0",
    "summary": "Revision session (Torts): LAWS212 Revision Session",
    "type": "lecture",
    "course": "LAWS212",
