@@ -314,7 +314,7 @@ for _e in _ann_events:
 lines.append("END:VCALENDAR")
 
 ics = "\r\n".join(lines) + "\r\n"
-out = r"C:\Users\asher\OneDrive\Documents\Second_Brain\Second_Brain\08_Resources\Calendar\Master Schedule.ics"
+out = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "Master Schedule.ics")
 import os
 os.makedirs(os.path.dirname(out), exist_ok=True)
 with open(out, "w", encoding="utf-8", newline="") as f:
