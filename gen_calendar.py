@@ -100,6 +100,23 @@ def weekday_dates(byday, start_date, end_date):
     return out
 
 
+def byday_utc(byday, hh, mm, offset_sec):
+    """BYDAY matching the UTC date of each instance.
+
+    Consumers evaluate a weekly BYDAY rule against DTSTART's own calendar,
+    which here is UTC (explicit-Z instants). For wall-clock times early
+    enough that the UTC instant falls on the *previous* calendar day (any
+    local time before offset hours: <12:00 in NZST, <13:00 in NZDT), the
+    recurrence weekday must be the day BEFORE the local weekday or events
+    render one calendar day late (Groceries Sat 08:00 showed up Sunday in
+    UTC-anchored consumers).
+    """
+    if hh * 60 + mm < offset_sec // 60:
+        return {"MO": "SU", "TU": "MO", "WE": "TU", "TH": "WE",
+                "FR": "TH", "SA": "FR", "SU": "SA"}[byday]
+    return byday
+
+
 def emit_recurring(summary, byday, start_date, end_date, hh, mm, dur_min, reminder_minutes=10, desc=""):
     """
     Emit one or more VEVENTs for a weekly (byday) event from start_date to
@@ -117,14 +134,14 @@ def emit_recurring(summary, byday, start_date, end_date, hh, mm, dur_min, remind
         s = akl_utc(nzst_dates[0], hh, mm, NZST)
         e = akl_utc(nzst_dates[0], hh, mm, NZST) + dd
         until = akl_utc(nzst_dates[-1], 23, 59, NZST)
-        rrule = "FREQ=WEEKLY;BYDAY=%s;UNTIL=%s" % (byday, fmt_utc(until))
+        rrule = "FREQ=WEEKLY;BYDAY=%s;UNTIL=%s" % (byday_utc(byday, hh, mm, NZST), fmt_utc(until))
         vevent_utc(summary, s, e, rrule, reminder_minutes, desc, uid_tag="NZST")
 
     if nzdt_dates:
         s = akl_utc(nzdt_dates[0], hh, mm, NZDT)
         e = akl_utc(nzdt_dates[0], hh, mm, NZDT) + dd
         until = akl_utc(nzdt_dates[-1], 23, 59, NZDT)
-        rrule = "FREQ=WEEKLY;BYDAY=%s;UNTIL=%s" % (byday, fmt_utc(until))
+        rrule = "FREQ=WEEKLY;BYDAY=%s;UNTIL=%s" % (byday_utc(byday, hh, mm, NZDT), fmt_utc(until))
         vevent_utc(summary, s, e, rrule, reminder_minutes, desc, uid_tag="NZDT")
 
 
