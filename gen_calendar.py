@@ -328,6 +328,38 @@ for _e in _ann_events:
     emit_once(_summary, _ed, _ehh, _emm, _dur, _rem, _desc,
               uid_tag="nuku:" + _e["id"])
 
+# ---------------------------------------------------------------------------
+# 9. EXAMS — confirmed timetable (user-confirmed 2026-09-26, "timetable is
+#    confirmed"). All three: 14:30 NZDT, RH LT2. 2:30 PM local is 01:30Z under
+#    NZDT (UTC+13) and emit_once picks NZDT automatically for post-27-Sep dates.
+#    Previously held OUT of the feed on purpose (provisional timetable, 12 Sep);
+#    now wired in for real. Each carries its gate + sprint window in the desc so
+#    the calendar says what the date is FOR, not just that it exists.
+#    3-hour block (14:30-17:30) = standard VUW paper. Reminder 24h out.
+# ---------------------------------------------------------------------------
+EXAMS = [
+    ("2026-10-17", 14, 30, "EXAM: LAWS213 Public Law",
+     "Exam Sat 17 Oct, 14:30 NZDT, RH LT2 (3h). FIRST exam of T2.\\n"
+     "Gate: >=80 (B+ quota, 80.0 line, hold ~1.5% buffer). Sprint Phase 1 ran 10-16 Oct.\\n"
+     "Scope: JR + Treaty/Te Tiriti + Waitangi Tribunal + Giuffreux block core.\\n"
+     "Two timed papers >=80 unlocks the 213 gate -> hours reallocate to 214.\\n"
+     "First open-book paper: laptop (Dell 3583), prep required."),
+    ("2026-10-22", 14, 30, "EXAM: LAWS214 Criminal Law",
+     "Exam Thu 22 Oct, 14:30 NZDT, RH LT2 (3h).\\n"
+     "Upside sink - all surplus hours. Bands: 73 floor (B+) -> 81 -> 89 -> 97.5 (A+).\\n"
+     "Sprint Phase 2 ran 18-21 Oct.\\n"
+     "Scope: homicide, liability (s 66), defences, procedure, attempts.\\n"
+     "Cheapest A+ band on the GPA = biggest transfer lever (5.67 needed at UoA)."),
+    ("2026-11-05", 14, 30, "EXAM: LAWS212 Torts",
+     "Exam Thu 5 Nov, 14:30 NZDT, RH LT2 (3h). LAST exam.\\n"
+     "Capped at >=80 (C+) - never a minute past the line. Sprint Phase 3 ran 23 Oct-4 Nov.\\n"
+     "Scope: privacy + public nuisance/Smith + defamation + ACC (four blocks).\\n"
+     "AFTER THIS: Arch migration weekend unlocks (Dell Inspiron 3583 wipe + install)."),
+]
+for _d, _hh, _mm, _sum, _desc in EXAMS:
+    emit_once(_sum, datetime.date.fromisoformat(_d), _hh, _mm, 180, 1440, _desc,
+              uid_tag="exam:" + _d)
+
 lines.append("END:VCALENDAR")
 
 ics = "\r\n".join(lines) + "\r\n"
