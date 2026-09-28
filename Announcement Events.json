@@ -6,19 +6,19 @@
   "course": "other",
   "date": "2026-09-16",
   "time": "17:30",
-  "location": "GBLT 1\r\n⏰ 5:00pm doors open; Common Room to follow; Room to follow",
+  "location": "GBLT 1\r\n\u23f0\u00a05:00pm doors open; Common Room to follow; Room to follow",
   "source": "New events including IPLS x VUWLSS Patron's lecture: Navigating the Law School",
   "msg_id": "1a064533b27cfd97"
  },
  {
   "id": "e7daaacd-68eb-5096-8b8a-89247e13ac7a",
-  "summary": "Assignment due (Crim): LAWS 214 Tutorial Assignment – Now Available",
+  "summary": "Assignment due (Crim): LAWS 214 Tutorial Assignment \u2013 Now Available",
   "type": "assignment",
   "course": "LAWS214",
   "date": "2026-09-11",
   "time": "16:00",
   "location": null,
-  "source": "LAWS 214 Tutorial Assignment – Now Available: 26.F.LAWS214: Criminal Law",
+  "source": "LAWS 214 Tutorial Assignment \u2013 Now Available: 26.F.LAWS214: Criminal Law",
   "msg_id": "1a0596aa654e33e9"
  },
  {
@@ -86,5 +86,28 @@
   "location": null,
   "source": "Essay competition for studies in law and the south pacific: Navigating the Law School",
   "msg_id": "1a0a7a281699e60a"
+ },
+ {
+  "id": "3fb4756b-136f-5939-ad4a-ccbb47063299",
+  "summary": "Test (Public): Exam revision session - Fiona",
+  "type": "test",
+  "course": "LAWS213",
+  "date": "2026-10-13",
+  "time": "10:00",
+  "location": "Rutherford House LT2 (recorded for those who can't attend)",
+  "source": "Exam revision session - Fiona : 26.F.LAWS213: Public Law",
+  "msg_id": "1a0e5a75cc16cf8c",
+  "end_time": "11:30"
+ },
+ {
+  "id": "1d2fb2ee-439f-54b8-934c-36f07128b35e",
+  "summary": "Workshop (Public): Reza's 11:30am Tutorial Today Cancelled and Office Hours...",
+  "type": "workshop",
+  "course": "LAWS213",
+  "date": "2026-10-02",
+  "time": "13:40",
+  "location": null,
+  "source": "Reza's 11:30am Tutorial Today Cancelled and Office Hours moved: 26.F.LAWS213: Public Law",
+  "msg_id": "1a0e4de6eacd5aec"
  }
 ]
