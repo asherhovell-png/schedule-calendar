@@ -1,113 +1,124 @@
 [
- {
-  "id": "7ef58f0c-f557-5f99-af5b-39e3d6d71280",
-  "summary": "Lecture: New events including IPLS x VUWLSS Patron's lecture: Navi...",
-  "type": "lecture",
-  "course": "other",
-  "date": "2026-09-16",
-  "time": "17:30",
-  "location": "GBLT 1\r\n\u23f0\u00a05:00pm doors open; Common Room to follow; Room to follow",
-  "source": "New events including IPLS x VUWLSS Patron's lecture: Navigating the Law School",
-  "msg_id": "1a064533b27cfd97"
- },
- {
-  "id": "e7daaacd-68eb-5096-8b8a-89247e13ac7a",
-  "summary": "Assignment due (Crim): LAWS 214 Tutorial Assignment \u2013 Now Available",
-  "type": "assignment",
-  "course": "LAWS214",
-  "date": "2026-09-11",
-  "time": "16:00",
-  "location": null,
-  "source": "LAWS 214 Tutorial Assignment \u2013 Now Available: 26.F.LAWS214: Criminal Law",
-  "msg_id": "1a0596aa654e33e9"
- },
- {
-  "id": "ae103a20-22c9-5997-9407-4c21d96926fd",
-  "summary": "Assignment due (Torts): Tri 2 writing assignment now due on 24 Sept",
-  "type": "assignment",
-  "course": "LAWS212",
-  "date": "2026-09-24",
-  "time": null,
-  "location": null,
-  "source": "Tri 2 writing assignment now due on 24 Sept : 26.F.LAWS212: The Law of Torts",
-  "msg_id": "1a01d5d638205aff"
- },
- {
-  "id": "9cedf244-202f-5361-92ec-fa6e89a60cd0",
-  "summary": "Revision session (Torts): LAWS212 Revision Session",
-  "type": "lecture",
-  "course": "LAWS212",
-  "date": "2026-10-13",
-  "time": "13:30",
-  "location": "RHLT1",
-  "source": "LAWS212 Revision Session: 26.F.LAWS212: The Law of Torts",
-  "msg_id": "1a0896943c4a5dc0"
- },
- {
-  "id": "5784ca93-48bb-54b9-8f54-5fdb6852760d",
-  "summary": "Workshop (Torts): Workshops - Important Please Read",
-  "type": "workshop",
-  "course": "LAWS212",
-  "date": "2026-09-28",
-  "time": "15:00",
-  "location": null,
-  "source": "Workshops - Important Please Read: 26.F.LAWS212: The Law of Torts",
-  "msg_id": "19c8cf993336df7f"
- },
- {
-  "id": "f5ffb25e-da5a-5ac3-9f18-5511b26d6f03",
-  "summary": "Assignment due: Essay competition for studies in law and the south pacifi...",
-  "type": "assignment",
-  "course": "other",
-  "date": "2026-09-21",
-  "time": "17:00",
-  "location": null,
-  "source": "Essay competition for studies in law and the south pacific: Navigating the Law School",
-  "msg_id": "1a0a7a281699e60a"
- },
- {
-  "id": "cb9ad13a-8e71-5255-9ebb-df1677bc4b51",
-  "summary": "Assignment due: Essay competition for studies in law and the south pacifi...",
-  "type": "assignment",
-  "course": "other",
-  "date": "2026-10-30",
-  "time": "17:00",
-  "location": null,
-  "source": "Essay competition for studies in law and the south pacific: Navigating the Law School",
-  "msg_id": "1a0a7a281699e60a"
- },
- {
-  "id": "2a877bef-11d5-5925-a921-a1e6e5c4f320",
-  "summary": "Assignment due: Essay competition for studies in law and the south pacifi...",
-  "type": "assignment",
-  "course": "other",
-  "date": "2026-12-08",
-  "time": "17:00",
-  "location": null,
-  "source": "Essay competition for studies in law and the south pacific: Navigating the Law School",
-  "msg_id": "1a0a7a281699e60a"
- },
- {
-  "id": "3fb4756b-136f-5939-ad4a-ccbb47063299",
-  "summary": "Test (Public): Exam revision session - Fiona",
-  "type": "test",
-  "course": "LAWS213",
-  "date": "2026-10-13",
-  "time": "10:00",
-  "location": "Rutherford House LT2 (recorded for those who can't attend)",
-  "source": "Exam revision session - Fiona : 26.F.LAWS213: Public Law",
-  "msg_id": "1a0e5a75cc16cf8c",
-  "end_time": "11:30"
- },
- {
-  "id": "1d2fb2ee-439f-54b8-934c-36f07128b35e",
-  "summary": "Workshop (Public): Reza's 11:30am Tutorial Today Cancelled and Office Hours...",
-  "type": "workshop",
-  "course": "LAWS213",
-  "date": "2026-10-02",
-  "time": "13:40",
-  "location": null,
-  "source": "Reza's 11:30am Tutorial Today Cancelled and Office Hours moved: 26.F.LAWS213: Public Law",
-  "msg_id": "1a0e4de6eacd5aec"
- }
+  {
+    "id": "7ef58f0c-f557-5f99-af5b-39e3d6d71280",
+    "summary": "Lecture: New events including IPLS x VUWLSS Patron's lecture: Navi...",
+    "type": "lecture",
+    "course": "other",
+    "date": "2026-09-16",
+    "time": "17:30",
+    "location": "GBLT 1\r\n⏰ 5:00pm doors open; Common Room to follow; Room to follow",
+    "source": "New events including IPLS x VUWLSS Patron's lecture: Navigating the Law School",
+    "msg_id": "1a064533b27cfd97"
+  },
+  {
+    "id": "e7daaacd-68eb-5096-8b8a-89247e13ac7a",
+    "summary": "Assignment due (Crim): LAWS 214 Tutorial Assignment – Now Available",
+    "type": "assignment",
+    "course": "LAWS214",
+    "date": "2026-09-11",
+    "time": "16:00",
+    "location": null,
+    "source": "LAWS 214 Tutorial Assignment – Now Available: 26.F.LAWS214: Criminal Law",
+    "msg_id": "1a0596aa654e33e9"
+  },
+  {
+    "id": "ae103a20-22c9-5997-9407-4c21d96926fd",
+    "summary": "Assignment due (Torts): Tri 2 writing assignment now due on 24 Sept",
+    "type": "assignment",
+    "course": "LAWS212",
+    "date": "2026-09-24",
+    "time": null,
+    "location": null,
+    "source": "Tri 2 writing assignment now due on 24 Sept : 26.F.LAWS212: The Law of Torts",
+    "msg_id": "1a01d5d638205aff"
+  },
+  {
+    "id": "9cedf244-202f-5361-92ec-fa6e89a60cd0",
+    "summary": "Revision session (Torts): LAWS212 Revision Session",
+    "type": "lecture",
+    "course": "LAWS212",
+    "date": "2026-10-13",
+    "time": "13:30",
+    "location": "RHLT1",
+    "source": "LAWS212 Revision Session: 26.F.LAWS212: The Law of Torts",
+    "msg_id": "1a0896943c4a5dc0"
+  },
+  {
+    "id": "5784ca93-48bb-54b9-8f54-5fdb6852760d",
+    "summary": "Workshop (Torts): Workshops - Important Please Read",
+    "type": "workshop",
+    "course": "LAWS212",
+    "date": "2026-09-28",
+    "time": "15:00",
+    "location": null,
+    "source": "Workshops - Important Please Read: 26.F.LAWS212: The Law of Torts",
+    "msg_id": "19c8cf993336df7f"
+  },
+  {
+    "id": "f5ffb25e-da5a-5ac3-9f18-5511b26d6f03",
+    "summary": "Assignment due: Essay competition for studies in law and the south pacifi...",
+    "type": "assignment",
+    "course": "other",
+    "date": "2026-09-21",
+    "time": "17:00",
+    "location": null,
+    "source": "Essay competition for studies in law and the south pacific: Navigating the Law School",
+    "msg_id": "1a0a7a281699e60a"
+  },
+  {
+    "id": "cb9ad13a-8e71-5255-9ebb-df1677bc4b51",
+    "summary": "Assignment due: Essay competition for studies in law and the south pacifi...",
+    "type": "assignment",
+    "course": "other",
+    "date": "2026-10-30",
+    "time": "17:00",
+    "location": null,
+    "source": "Essay competition for studies in law and the south pacific: Navigating the Law School",
+    "msg_id": "1a0a7a281699e60a"
+  },
+  {
+    "id": "2a877bef-11d5-5925-a921-a1e6e5c4f320",
+    "summary": "Assignment due: Essay competition for studies in law and the south pacifi...",
+    "type": "assignment",
+    "course": "other",
+    "date": "2026-12-08",
+    "time": "17:00",
+    "location": null,
+    "source": "Essay competition for studies in law and the south pacific: Navigating the Law School",
+    "msg_id": "1a0a7a281699e60a"
+  },
+  {
+    "id": "3fb4756b-136f-5939-ad4a-ccbb47063299",
+    "summary": "Test (Public): Exam revision session - Fiona",
+    "type": "test",
+    "course": "LAWS213",
+    "date": "2026-10-13",
+    "time": "10:00",
+    "location": "Rutherford House LT2 (recorded for those who can't attend)",
+    "source": "Exam revision session - Fiona : 26.F.LAWS213: Public Law",
+    "msg_id": "1a0e5a75cc16cf8c",
+    "end_time": "11:30"
+  },
+  {
+    "id": "1d2fb2ee-439f-54b8-934c-36f07128b35e",
+    "summary": "Workshop (Public): Reza's 11:30am Tutorial Today Cancelled and Office Hours...",
+    "type": "workshop",
+    "course": "LAWS213",
+    "date": "2026-10-02",
+    "time": "13:40",
+    "location": null,
+    "source": "Reza's 11:30am Tutorial Today Cancelled and Office Hours moved: 26.F.LAWS213: Public Law",
+    "msg_id": "1a0e4de6eacd5aec"
+  },
+  {
+    "id": "e71b8888-937b-5b50-ac8e-554aa0f999ee",
+    "summary": "Workshop (Torts): Tomorrow's replacement zoom workshop",
+    "type": "workshop",
+    "course": "LAWS212",
+    "date": "2026-09-30",
+    "time": "16:20",
+    "location": "Zoom (link emailed)",
+    "source": "Tomorrow's replacement zoom workshop: 26.F.LAWS212: The Law of Torts",
+    "msg_id": "1a0eac384bdbb6bf"
+  }
 ]
