@@ -172,7 +172,7 @@ def emit_once(summary, d, hh, mm, dur_min, reminder_minutes=10, desc="", uid_tag
     uid = str(uuid.uuid5(uuid.NAMESPACE_URL, "sb://once:" + summary + ld(d) + str(hh) + str(mm) + uid_tag))
     lines.append("BEGIN:VEVENT")
     lines.append("UID:%s" % uid)
-    lines.append("DTSTAMP:" + stable_stamp(start_utc))
+    lines.append("DTSTAMP:" + stable_stamp(s))
     lines.append("DTSTART;VALUE=DATE-TIME:%s" % fmt_utc(s))
     lines.append("DTEND;VALUE=DATE-TIME:%s" % fmt_utc(e))
     lines.append("SUMMARY:%s" % summary)
