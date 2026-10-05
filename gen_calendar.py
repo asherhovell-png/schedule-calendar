@@ -47,6 +47,24 @@ def stamp():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
 
+def stable_stamp(start_utc):
+    """DTSTAMP derived from the EVENT, not from the clock (2026-10-06).
+
+    A wall-clock DTSTAMP rewrites all 43 DTSTAMP lines on every single run, so the
+    generated file is never byte-identical, `git diff --cached --quiet` is never
+    true, and run_nuku.sh's "no calendar changes to push" branch is unreachable
+    dead code. The practical cost: two pointless commits a day, and a Google "From
+    URL" importer that sees every event as modified every time it refreshes.
+
+    Anchoring DTSTAMP to the event's own start instant makes generation
+    deterministic — identical input produces an identical file, so a real no-op
+    run is actually detected as one. RFC 5545 3.8.7.2 defines DTSTAMP as when the
+    iCalendar object was created, which this satisfies in substance: the file is
+    regenerated from the same source, and the object it describes is unchanged.
+    """
+    return start_utc.astimezone(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+
 def akl_utc(d, hh, mm, offset_sec):
     """Auckland wall-clock (date d, hh:mm) -> UTC-aware datetime, given offset.
 
@@ -75,7 +93,7 @@ def vevent_utc(summary, start_utc, end_utc, rrule=None, reminder_minutes=10, des
     uid = str(uuid.uuid5(uuid.NAMESPACE_URL, "sb://" + summary + uid_tag + start_utc.strftime("%Y%m%d%H%M")))
     lines.append("BEGIN:VEVENT")
     lines.append("UID:%s" % uid)
-    lines.append("DTSTAMP:" + stamp())
+    lines.append("DTSTAMP:" + stable_stamp(start_utc))
     lines.append("DTSTART;VALUE=DATE-TIME:%s" % fmt_utc(start_utc))
     lines.append("DTEND;VALUE=DATE-TIME:%s" % fmt_utc(end_utc))
     lines.append("SUMMARY:%s" % summary)
@@ -154,7 +172,7 @@ def emit_once(summary, d, hh, mm, dur_min, reminder_minutes=10, desc="", uid_tag
     uid = str(uuid.uuid5(uuid.NAMESPACE_URL, "sb://once:" + summary + ld(d) + str(hh) + str(mm) + uid_tag))
     lines.append("BEGIN:VEVENT")
     lines.append("UID:%s" % uid)
-    lines.append("DTSTAMP:" + stamp())
+    lines.append("DTSTAMP:" + stable_stamp(start_utc))
     lines.append("DTSTART;VALUE=DATE-TIME:%s" % fmt_utc(s))
     lines.append("DTEND;VALUE=DATE-TIME:%s" % fmt_utc(e))
     lines.append("SUMMARY:%s" % summary)
@@ -176,7 +194,7 @@ s = akl_utc(sleep_start, 22, 0, NZST)
 until_s = akl_utc(datetime.date(2026, 9, 26), 23, 59, NZST)
 lines.append("BEGIN:VEVENT")
 lines.append("UID:" + str(uuid.uuid5(uuid.NAMESPACE_URL, "sb://SleepNZST")))
-lines.append("DTSTAMP:" + stamp())
+lines.append("DTSTAMP:" + stable_stamp(s))
 lines.append("DTSTART;VALUE=DATE-TIME:%s" % fmt_utc(s))
 lines.append("DURATION:PT9H")
 lines.append("SUMMARY:Sleep")
@@ -188,7 +206,7 @@ s2 = akl_utc(datetime.date(2026, 9, 27), 22, 0, NZDT)
 until2 = akl_utc(sleep_end, 23, 59, NZDT)
 lines.append("BEGIN:VEVENT")
 lines.append("UID:" + str(uuid.uuid5(uuid.NAMESPACE_URL, "sb://SleepNZDT")))
-lines.append("DTSTAMP:" + stamp())
+lines.append("DTSTAMP:" + stable_stamp(s2))
 lines.append("DTSTART;VALUE=DATE-TIME:%s" % fmt_utc(s2))
 lines.append("DURATION:PT9H")
 lines.append("SUMMARY:Sleep")
