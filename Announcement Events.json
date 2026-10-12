@@ -142,5 +142,41 @@
     "location": "RHLT1",
     "source": "VUW LSS revision session (user, 2026-10-12)",
     "msg_id": null
+  },
+  {
+    "id": "f1be1460-b3af-4e2f-b4c3-a04a2271a63c",
+    "summary": "Revision session (Crim): MPI LAWS214 Revision Session",
+    "type": "lecture",
+    "course": "LAWS214",
+    "date": "2026-10-12",
+    "time": "11:00",
+    "duration": 120,
+    "location": "GBLT 3",
+    "source": "MPI Revision Session Tomorrow (Morgyn Jakob, 2026-10-11)",
+    "msg_id": "1a12d015202fe715"
+  },
+  {
+    "id": "844c990a-c28a-4db5-a5ff-4a75e5503032",
+    "summary": "Revision session (Public): MPI LAWS213 Revision Session",
+    "type": "lecture",
+    "course": "LAWS213",
+    "date": "2026-10-14",
+    "time": "12:00",
+    "duration": 120,
+    "location": "OGB LT3",
+    "source": "LAWS213 MPI Revision Session (Tashi Hogan, 2026-10-12)",
+    "msg_id": "1a12dbb879dbe603"
+  },
+  {
+    "id": "9e0ccdd8-da31-4518-8ca4-97ca4dcbd202",
+    "summary": "Revision session (Torts): MPI LAWS212 Revision Session",
+    "type": "lecture",
+    "course": "LAWS212",
+    "date": "2026-10-14",
+    "time": "17:00",
+    "duration": 120,
+    "location": "GBLT3",
+    "source": "Torts Revision Sessions (Johnny Bentley-Cribb, 2026-10-11)",
+    "msg_id": "1a12d23af5601882"
   }
 ]

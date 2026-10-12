@@ -337,7 +337,10 @@ for _e in _ann_events:
             _ehh, _emm = [int(x) for x in _e["time"].split(":")][:2]
         except Exception:
             pass
-    _dur = 60
+    try:
+        _dur = int(_e.get("duration") or 60)
+    except Exception:
+        _dur = 60
     _rem = 15
     if _e.get("type") in ("test", "assignment"):
         _rem = 1440  # one-day reminder for deadlines
