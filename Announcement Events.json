@@ -120,5 +120,27 @@
     "location": "Zoom (link emailed)",
     "source": "Tomorrow's replacement zoom workshop: 26.F.LAWS212: The Law of Torts",
     "msg_id": "1a0eac384bdbb6bf"
+  },
+  {
+    "id": "c12f91d4-0627-4e86-8087-47cbae707644",
+    "summary": "Revision session (Public): VUW LSS LAWS213 Revision Session",
+    "type": "lecture",
+    "course": "LAWS213",
+    "date": "2026-10-12",
+    "time": "17:00",
+    "location": "RHLT1",
+    "source": "VUW LSS revision session (user, 2026-10-12)",
+    "msg_id": null
+  },
+  {
+    "id": "8448ea44-090f-4661-b6f9-cf6ad17344f1",
+    "summary": "Revision session (Crim): VUW LSS LAWS214 Revision Session",
+    "type": "lecture",
+    "course": "LAWS214",
+    "date": "2026-10-13",
+    "time": "17:30",
+    "location": "RHLT1",
+    "source": "VUW LSS revision session (user, 2026-10-12)",
+    "msg_id": null
   }
 ]
