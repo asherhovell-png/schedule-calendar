@@ -269,7 +269,11 @@ emit_recurring("Public Lecture", "FR", wl1, lecture_end, 15, 10, 80, 10, "LAWS21
 # ---------------------------------------------------------------------------
 # 4. Muay Thai — every week to ~mid-Nov (only while in Wellington), DST split.
 # ---------------------------------------------------------------------------
-mt_end = datetime.date(2026, 11, 15)
+# Last Wellington session: Mon 2 or Wed 4 Nov 2026 (user, 2026-10-29 — leaving Wellington).
+# UNTIL set to Wed 4 Nov so both candidate last sessions stay on the calendar; trim to
+# Mon 2 Nov once the actual last session is known. No Wellington MT after this — the
+# Auckland gym (Hawk's Nest) is added fresh once its days/venue are decided.
+mt_end = datetime.date(2026, 11, 4)
 emit_recurring("Muay Thai training", "MO", wl1, mt_end, 18, 30, 60, 30, "Wellington Thai Boxing")
 emit_recurring("Sparring",           "MO", wl1, mt_end, 19, 30, 45, 15, "Wellington Thai Boxing")
 emit_recurring("Muay Thai training", "WE", wl1, mt_end, 18, 30, 60, 30, "Wellington Thai Boxing")
