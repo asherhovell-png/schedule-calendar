@@ -267,9 +267,10 @@ emit_recurring("Crim Lecture",  "TH", wl1, lecture_end, 16, 10, 80, 10, "LAWS214
 emit_recurring("Public Lecture", "FR", wl1, lecture_end, 15, 10, 80, 10, "LAWS213 Public lecture")
 
 # ---------------------------------------------------------------------------
-# 4. Muay Thai — every week to ~mid-Nov (only while in Wellington), DST split.
+# 4. Muay Thai — CLOSED. Era ended Mon 2 Nov 2026 (move to Whangārei 7 Nov). UNTIL 11-03 so
+#    the 11-04 slot is not emitted. Re-open only on a new arc (summer/Auckland).
 # ---------------------------------------------------------------------------
-mt_end = datetime.date(2026, 11, 15)
+mt_end = datetime.date(2026, 11, 3)   # MT OVER — last session Mon 2 Nov 2026 (user 2026-11-04)
 emit_recurring("Muay Thai training", "MO", wl1, mt_end, 18, 30, 60, 30, "Wellington Thai Boxing")
 emit_recurring("Sparring",           "MO", wl1, mt_end, 19, 30, 45, 15, "Wellington Thai Boxing")
 emit_recurring("Muay Thai training", "WE", wl1, mt_end, 18, 30, 60, 30, "Wellington Thai Boxing")
